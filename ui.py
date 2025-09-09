@@ -9,7 +9,7 @@ Fisik_1= st.number_input(
     label="Usia anda (dalam tahun)", 
     min_value=18, 
     max_value=100, 
-    value=100)
+    value=18)
 
 Fisik_2_list= ['Pria', 'Wanita']
 Fisik_3_list= ['Ya', 'Tidak']
@@ -34,14 +34,14 @@ Finansial_1_encoded= st.selectbox(label="Pendapatan per Bulan", options=Finansia
 Finansial_2_encoded= st.selectbox(label="Biaya yang dapat dikeluarkan pada tiket transportasi", options=Finansial_2_list, key="Finansial_2")
 Karakteristik_1_encoded= st.selectbox(label="Tujuan Perjalanan", options=Karakteristik_1_list, key="Karakteristik_1")
 
-durasi_time = st.time_input("Durasi Perjalanan (jam:menit)", value=datetime.time(2, 0))
+durasi_time = st.time_input("Durasi Perjalanan Maksimal (jam:menit)", value=datetime.time(0, 0))
 durasi_perjalanan = durasi_time.hour + durasi_time.minute / 60
 
 tarif_transportasi= st.number_input(
-    label="Tarif Transportasi (dalam ribu rupiah)", 
+    label="Tarif Transportasi Maksimal (dalam ribu rupiah)", 
     min_value=0, 
     max_value=5000000, 
-    value=5000000, 
+    value=0, 
     step=50000)
 
 fasilitas_options = [
@@ -56,7 +56,7 @@ fasilitas_operator = len(fasilitas_selected)
 
 jadwal_keberangkatan_encoded= st.selectbox(label="Jadwal Keberangkatan", options=jadwal_keberangkatan_list, key="jadwal_keberangkatan")
 
-kedatangan_time = st.time_input("Jadwal Kedatangan (jam:menit)", value=datetime.time(2, 0))
+kedatangan_time = st.time_input("Jadwal Kedatangan (jam:menit)", value=datetime.time(0, 0))
 jadwal_kedatangan = kedatangan_time.hour + kedatangan_time.minute / 60
 
 Frekuensi_encoded= st.selectbox(label="Frekuensi Perjalanan", options=Frekuensi_list, key="Frekuensi")
