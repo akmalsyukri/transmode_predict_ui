@@ -14,9 +14,8 @@ Fisik_1= st.number_input(
 Fisik_2_list= ['Pria', 'Wanita']
 Fisik_3_list= ['Ya', 'Tidak']
 Fisik_4_list= ['Ya', 'Tidak']
-Fisik_5_list= ['Ya', 'Tidak']
 Mental_1_list= ['Pelajar/Mahasiswa', 'Aparatur Sipil Negara (ASN)', 'Wiraswasta/Pengusaha', 'Pegawai Swasta', 'Pensiunan', 'Tidak Bekerja']
-Mental_2_list= ['SD/Sederajat', 'SMP/Sederajat', 'SMA/Sederajat', 'Diploma', 'Sarjana (S1)', 'Magister (S2)', 'Doktor (S3)']
+Mental_2_list= ['SMA/Sederajat', 'Diploma', 'Sarjana (S1)', 'Magister (S2)', 'Doktor (S3)']
 Finansial_1_list= ['<Rp2,000,000', 'Rp2,000,000 - Rp4,999,999', 'Rp5,000,000 - Rp9,999,999', '>Rp10,000,000']
 Finansial_2_list= ['<Rp500,000', 'Rp500,000 - Rp1,000,000', '>Rp1,000,000']
 Karakteristik_1_list= ['Bisnis', 'Pendidikan', 'Wisata', 'Rumah']
@@ -27,7 +26,6 @@ Kelompok_list= ['Sendiri', 'Bersama 1 orang lain', 'Bersama 2 orang lain', 'Bers
 Fisik_2_encoded= st.selectbox(label="Jenis Kelamin", options=Fisik_2_list, key="Fisik_2")
 Fisik_3_encoded= st.selectbox(label="Apakah Anda Memiliki SIM?", options=Fisik_3_list, key="Fisik_3")
 Fisik_4_encoded= st.selectbox(label="Apakah Anda Memiliki Kendaraan Pribadi?", options=Fisik_4_list, key="Fisik_4")
-Fisik_5_encoded= st.selectbox(label="Apakah Anda sanggup mengemudi pada rute ini?", options=Fisik_5_list, key="Fisik_5")
 Mental_1_encoded= st.selectbox(label="Pekerjaan", options=Mental_1_list, key="Mental_1")
 Mental_2_encoded= st.selectbox(label="Pendidikan Terakhir", options=Mental_2_list, key="Mental_2")
 Finansial_1_encoded= st.selectbox(label="Pendapatan per Bulan", options=Finansial_1_list, key="Finansial_1")
@@ -71,7 +69,6 @@ if recommendation:
         'Fisik_2_encoded': Fisik_2_encoded,
         'Fisik_3_encoded': Fisik_3_encoded,
         'Fisik_4_encoded': Fisik_4_encoded,
-        'Fisik_5_encoded': Fisik_5_encoded,
         'Mental_1_encoded': Mental_1_encoded,
         'Mental_2_encoded': Mental_2_encoded,
         'Finansial_1_encoded': Finansial_1_encoded,
