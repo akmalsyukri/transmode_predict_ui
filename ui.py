@@ -21,7 +21,7 @@ Finansial_2_list= ['<Rp500,000', 'Rp500,000 - Rp1,000,000', '>Rp1,000,000']
 Karakteristik_1_list= ['Bisnis', 'Pendidikan', 'Wisata', 'Rumah']
 jadwal_keberangkatan_list= ['Pagi hari', 'Siang hari', 'Sore hari', 'Malam hari', 'Dini hari']
 Frekuensi_list= ['Kurang dari 1 kali per bulan','1 kali per bulan','2-3 kali per bulan','1 kali per pekan','2-3 kali per pekan','1 kali per pekan','Setiap hari']
-Kelompok_list= ['Sendiri', 'Bersama 1 orang lain', 'Bersama 2 orang lain', 'Bersama 3 orang lain atau lebih']
+Kelompok_list= ['Sendiri', 'Bersama 1 (satu) orang', 'Bersama 2 (dua) orang', 'Bersama 3 (tiga) orang atau lebih']
 
 Fisik_2_encoded= st.selectbox(label="Jenis Kelamin", options=Fisik_2_list, key="Fisik_2")
 Fisik_3_encoded= st.selectbox(label="Apakah Anda Memiliki SIM?", options=Fisik_3_list, key="Fisik_3")
@@ -65,7 +65,7 @@ recommendation= st.button(label="Recommend Transportation Mode")
 if recommendation:
     # Create a DataFrame for the input features
     input_data = ({
-        'Fisik_1': Fisik_1,  # Assuming Fisik_1 is a constant feature with value 1
+        'Fisik_1': Fisik_1,
         'Fisik_2_encoded': Fisik_2_encoded,
         'Fisik_3_encoded': Fisik_3_encoded,
         'Fisik_4_encoded': Fisik_4_encoded,
